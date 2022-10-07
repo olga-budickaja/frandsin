@@ -1,0 +1,23 @@
+.sideBar {
+    width: 6%;
+    height: 600px;
+    background: white;
+    padding: 36px 10px;
+    border-radius: 5px;
+    margin-left: 40px;
+    order: 3;
+}
+
+.sideBarNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideBarNavItem {
+    width: 70px;
+    height: 70px;
+    margin: 20px 0;
+    background: rgba(4, 157, 191, 0.1);
+    border-radius: 100%;
+}

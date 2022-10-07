@@ -1,0 +1,7 @@
+.weather {
+    width: 86%;
+    height: 100vh;
+    background: lavenderblush;
+    padding: 20px;
+    order: 2;
+}
