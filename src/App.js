@@ -13,17 +13,16 @@ import Users from "./Components/Main/Users/Users";
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-function App() {
+function App(props) {
   return (
       <BrowserRouter>
-              <Header />
+              <Header users={props.appState.users}/>
               <Main>
                   <Navbar />
-                  <Sidebar />
+
                   <Routes>
-                      <Route path="/" element={<Media />} />
+                      <Route path="/" element={<Profile />} />
                       <Route path="/media" element={<Media />} />
-                      <Route path="/profile" element={<Profile />} />
                       <Route path="/groups" element={<Groups />} />
                       <Route path="/music" element={<Music />} />
                       <Route path="/weather" element={<Weather />} />
@@ -33,7 +32,7 @@ function App() {
                       <Route path="/user4" element={<Users />} />
                       <Route path="/user5" element={<Users />} />
                   </Routes>
-
+                  <Sidebar />
               </Main>
       </BrowserRouter>
 
