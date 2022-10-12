@@ -13,6 +13,8 @@ import Stars from "./Components/Main/Stars/Stars";
 
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import SideBarItem from "./Components/Main/Sidebar/SideBarItem";
+import {SideBarList} from "./Components/Main/Sidebar/SideBarList";
 
 function App(props) {
   return (
@@ -27,11 +29,7 @@ function App(props) {
                       <Route path="/groups" element={<Groups />} />
                       <Route path="/music" element={<Music />} />
                       <Route path="/weather" element={<Weather />} />
-                      <Route path="/user1" element={<Users />} />
-                      <Route path="/user2" element={<Users />} />
-                      <Route path="/user3" element={<Users />} />
-                      <Route path="/user4" element={<Users />} />
-                      <Route path="/user5" element={<Users />} />
+                      <Route path={`/${props.appState.users.name}`} element={<Users users={props.appState.users}/>} />
                   </Routes>
                   <Sidebar users={props.appState.users}/>
               </Main>
