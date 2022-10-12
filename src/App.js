@@ -17,22 +17,22 @@ function App(props) {
   return (
       <BrowserRouter>
               <Header users={props.appState.users}/>
+              <Navbar />
+              <Routes>
+                  <Route path="/" element={<Profile />} />
+                  <Route path="/media" element={<Media />} />
+                  <Route path="/groups" element={<Groups />} />
+                  <Route path="/music" element={<Music />} />
+                  <Route path="/weather" element={<Weather />} />
+                  <Route path="/user1" element={<Users />} />
+                  <Route path="/user2" element={<Users />} />
+                  <Route path="/user3" element={<Users />} />
+                  <Route path="/user4" element={<Users />} />
+                  <Route path="/user5" element={<Users />} />
+              </Routes>
+              <Sidebar />
               <Main>
-                  <Navbar />
 
-                  <Routes>
-                      <Route path="/" element={<Profile />} />
-                      <Route path="/media" element={<Media />} />
-                      <Route path="/groups" element={<Groups />} />
-                      <Route path="/music" element={<Music />} />
-                      <Route path="/weather" element={<Weather />} />
-                      <Route path="/user1" element={<Users />} />
-                      <Route path="/user2" element={<Users />} />
-                      <Route path="/user3" element={<Users />} />
-                      <Route path="/user4" element={<Users />} />
-                      <Route path="/user5" element={<Users />} />
-                  </Routes>
-                  <Sidebar />
               </Main>
       </BrowserRouter>
 
