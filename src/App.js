@@ -9,6 +9,7 @@ import Music from "./Components/Main/Music/Music";
 import Weather from "./Components/Main/Weather/Weather";
 import Sidebar from "./Components/Main/Sidebar/Sidebar";
 import Users from "./Components/Main/Users/Users";
+import Stars from "./Components/Main/Stars/Stars";
 
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
@@ -17,22 +18,22 @@ function App(props) {
   return (
       <BrowserRouter>
               <Header users={props.appState.users}/>
-              <Navbar />
-              <Routes>
-                  <Route path="/" element={<Profile />} />
-                  <Route path="/media" element={<Media />} />
-                  <Route path="/groups" element={<Groups />} />
-                  <Route path="/music" element={<Music />} />
-                  <Route path="/weather" element={<Weather />} />
-                  <Route path="/user1" element={<Users />} />
-                  <Route path="/user2" element={<Users />} />
-                  <Route path="/user3" element={<Users />} />
-                  <Route path="/user4" element={<Users />} />
-                  <Route path="/user5" element={<Users />} />
-              </Routes>
-              <Sidebar />
-              <Main>
-
+              <Main users={props.appState.users}>
+                  <Navbar />
+                  <Routes>
+                      <Route path="/" element={<Profile />} />
+                      <Route path="/timeline" element={<Media />} />
+                      <Route path="/favorites" element={<Stars />} />
+                      <Route path="/groups" element={<Groups />} />
+                      <Route path="/music" element={<Music />} />
+                      <Route path="/weather" element={<Weather />} />
+                      <Route path="/user1" element={<Users />} />
+                      <Route path="/user2" element={<Users />} />
+                      <Route path="/user3" element={<Users />} />
+                      <Route path="/user4" element={<Users />} />
+                      <Route path="/user5" element={<Users />} />
+                  </Routes>
+                  <Sidebar users={props.appState.users}/>
               </Main>
       </BrowserRouter>
 

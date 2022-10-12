@@ -1,6 +1,7 @@
 .weather {
-    width: 86%;
+    width: calc(100% - 360px);
     height: 100vh;
     background: lavenderblush;
     padding: 20px;
+    margin: 0 auto;
 }

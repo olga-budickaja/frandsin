@@ -2,8 +2,8 @@ import React from "react";
 import style from "./Navbar.module.scss";
 import {NavLink} from "react-router-dom";
 import { ReactComponent as Timeline } from "../../../Redux/icons/timeline.svg";
-import { ReactComponent as Star } from "../../../Redux/icons/star.svg";
-import { ReactComponent as Group } from "../../../Redux/icons/group.svg";
+import { ReactComponent as Stars } from "../../../Redux/icons/star.svg";
+import { ReactComponent as Groups } from "../../../Redux/icons/group.svg";
 import { ReactComponent as Weather } from "../../../Redux/icons/weaser.svg";
 import { ReactComponent as Music } from "../../../Redux/icons/headphones.svg";
 
@@ -15,10 +15,10 @@ const Navbar = () => {
                     <Timeline />
                 </NavLink>
                 <NavLink to={'/favorites'} className={style.navBarNavItem}>
-                    <Star />
+                    <Stars />
                 </NavLink>
                 <NavLink to={'/groups'} className={style.navBarNavItem}>
-                    <Group />
+                    <Groups />
                 </NavLink>
                 <NavLink to={'/music'} className={style.navBarNavItem}>
                     <Music />

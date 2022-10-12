@@ -1,16 +1,14 @@
 import React from "react";
-import style from "./Sidebar.module.css"
-import {NavLink} from "react-router-dom";
+import style from "./Sidebar.module.scss"
+import {SideBarList} from "./SideBarList";
 
-const Sidebar = () => {
+
+
+const Sidebar = (props) => {
     return (
         <div className={style.sideBar}>
             <nav className={style.sideBarNav}>
-                <NavLink to={'/user1'} className={style.sideBarNavItem} />
-                <NavLink to={'/user2'} className={style.sideBarNavItem} />
-                <NavLink to={'/user3'} className={style.sideBarNavItem} />
-                <NavLink to={'/user4'} className={style.sideBarNavItem} />
-                <NavLink to={'/user5'} className={style.sideBarNavItem} />
+                <SideBarList users={props.users} />
             </nav>
         </div>
     )
