@@ -1,17 +1,33 @@
 {
   "files": {
-    "main.css": "/frandsin/static/css/main.8e3b8bc9.css",
-    "main.js": "/frandsin/static/js/main.b740df45.js",
+    "main.css": "/frandsin/static/css/main.e3074d90.css",
+    "main.js": "/frandsin/static/js/main.46708e53.js",
     "static/js/787.b0cf926a.chunk.js": "/frandsin/static/js/787.b0cf926a.chunk.js",
+    "static/media/user3.jpg": "/frandsin/static/media/user3.e8c42a717c89ecc58a4c.jpg",
+    "static/media/user2.jpg": "/frandsin/static/media/user2.6b7fa57d77de7e2282b9.jpg",
+    "static/media/user4.jpg": "/frandsin/static/media/user4.4753ac66d8f636e2a96d.jpg",
+    "static/media/user5.jpg": "/frandsin/static/media/user5.75a19e24d3827fc2e65a.jpg",
+    "static/media/user1.jpg": "/frandsin/static/media/user1.6a21dc86a5189fbb352d.jpg",
     "static/media/avatar.jpg": "/frandsin/static/media/avatar.08b5ff961e0009bee197.jpg",
     "static/media/Logo.png": "/frandsin/static/media/Logo.a7b728eb92c263e64056.png",
+    "static/media/group.svg": "/frandsin/static/media/group.b3bd08f894a6c56f750725aa1b4a908d.svg",
+    "static/media/weaser.svg": "/frandsin/static/media/weaser.f207644da091f2de84e4eacd1888f58e.svg",
+    "static/media/theme.svg": "/frandsin/static/media/theme.a6525a9e4bf8b3ba2b7641226bc4932c.svg",
+    "static/media/headphones.svg": "/frandsin/static/media/headphones.0cd914de2e4fe744c2d9f92aa8b2da05.svg",
+    "static/media/star.svg": "/frandsin/static/media/star.28fa9bc9694edb4b5a7722d3b48a3733.svg",
+    "static/media/user.svg": "/frandsin/static/media/user.78709350ec15469228703f7ec067f835.svg",
+    "static/media/message.svg": "/frandsin/static/media/message.c289c531cfaf9f49161c33d4ce1a9d82.svg",
     "index.html": "/frandsin/index.html",
-    "main.8e3b8bc9.css.map": "/frandsin/static/css/main.8e3b8bc9.css.map",
-    "main.b740df45.js.map": "/frandsin/static/js/main.b740df45.js.map",
+    "static/media/bell.svg": "/frandsin/static/media/bell.575f53156323f9de49f8c56582eb2aff.svg",
+    "static/media/home.svg": "/frandsin/static/media/home.d5798abd92632f76983dc379020c0899.svg",
+    "static/media/search.svg": "/frandsin/static/media/search.9da7a23e90f9b7efcaeaf125747dddf0.svg",
+    "static/media/timeline.svg": "/frandsin/static/media/timeline.96253aa50be22f65a8274bcf49ef3a21.svg",
+    "main.e3074d90.css.map": "/frandsin/static/css/main.e3074d90.css.map",
+    "main.46708e53.js.map": "/frandsin/static/js/main.46708e53.js.map",
     "787.b0cf926a.chunk.js.map": "/frandsin/static/js/787.b0cf926a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e3b8bc9.css",
-    "static/js/main.b740df45.js"
+    "static/css/main.e3074d90.css",
+    "static/js/main.46708e53.js"
   ]
 }
