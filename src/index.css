@@ -63,6 +63,23 @@ code {
   font-size: 12px;
   letter-spacing: 1px;
   color: rgba(81, 89, 94, 0.6);
+  cursor: pointer;
+}
+
+.btn .icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: auto;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  fill: rgba(81, 89, 94, 0.6);
+  margin-right: 10px;
 }
 
 .btnBlue {

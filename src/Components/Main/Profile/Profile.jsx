@@ -7,6 +7,8 @@ import { ReactComponent as About } from "../../../Redux/asscess/icons/profile.sv
 import { ReactComponent as Friends } from "../../../Redux/asscess/icons/group.svg";
 import { ReactComponent as Photo } from "../../../Redux/asscess/icons/photo.svg";
 import {ReactComponent as Search} from "../../../Redux/asscess/icons/search.svg";
+import {ReactComponent as Pencil} from "../../../Redux/asscess/icons/pencil.svg";
+import {ReactComponent as Reload} from "../../../Redux/asscess/icons/reload.svg";
 
 const Profile = (props) => {
 
@@ -46,26 +48,26 @@ const Profile = (props) => {
                     <div className={style.sidePanelWrapper}>
                         <div className={style.sidePanelNavRight}>
                             <button className={`${style.sidePanelNavLeftBtn} ${style.sidePanelNavLeftBtnActive} btn`}>
-                                <span className={style.sidePanelNavLeftBtnIcon}>
-                                    <Timeline className={style.sidePanelNavLeftBtnsvg} />
+                                <span className="icon">
+                                    <Timeline />
                                 </span>
                                 Timeline
                             </button>
                             <button className={`${style.sidePanelNavLeftBtn} btn`}>
-                                <span className={style.sidePanelNavLeftBtnIcon}>
-                                    <About className={style.sidePanelNavLeftBtnsvg} />
+                                <span className="icon">
+                                    <About />
                                 </span>
                                 About
                             </button>
                             <button className={`${style.sidePanelNavLeftBtn} btn`}>
-                                <span className={style.sidePanelNavLeftBtnIcon}>
-                                    <Friends className={style.sidePanelNavLeftBtnsvg} />
+                                <span className="icon">
+                                    <Friends />
                                 </span>
                                 Friends
                             </button>
                             <button className={`${style.sidePanelNavLeftBtn} btn`}>
-                                <span className={style.sidePanelNavLeftBtnIcon}>
-                                    <Photo className={style.sidePanelNavLeftBtnsvg} />
+                                <span className="icon">
+                                    <Photo />
                                 </span>
                                 Photo
                             </button>
@@ -80,6 +82,51 @@ const Profile = (props) => {
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className={style.body}>
+                <div className="container">
+                    <div className={style.bodyWrapper}>
+                        <div className={`${style.bodyItem} ${style.bodyAbout}`}>
+                            <div className={style.bodyTitle}>
+                                <div className={style.bodyTitleWrapper}>
+                                    <div className={style.bodyTitleDescription}>
+                                        <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>About</h2>
+                                        My Self
+                                    </div>
+                                    <div className={style.bodyTitleBtns}>
+                                        <div className={`${style.bodyTitleBtn}`}><Pencil/></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className={`${style.bodyItem} ${style.bodyPosts}`}>
+                            <div className={style.bodyTitle}>
+                                <div className={style.bodyTitleWrapper}>
+                                    <div className={style.bodyTitleDescription}>
+                                        <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>Create Post</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={`${style.bodyItem} ${style.bodyEvent}`}>
+                            <div className={`${style.bodyTitle} ${style.bodyEventBody}`}>
+                                <div className={style.bodyTitleWrapper}>
+                                    <div className={style.bodyTitleDescription}>
+                                        <h2 className={`${style.bodyTitleDescriptionTitle} ${style.bodyEventWhite} title_fz2`}>My Event</h2>
+                                    </div>
+                                    <div className={style.bodyTitleBtns}>
+                                        <div className={`${style.bodyTitleBtn}`}><Reload /></div>
+                                        <div className={`${style.bodyTitleBtn}`}><Pencil /></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
