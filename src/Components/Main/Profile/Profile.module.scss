@@ -154,9 +154,7 @@
         column-gap: 20px;
     }
     &Item {
-        background: #ffffff;
         border-radius: 8px;
-        padding: 30px;
     }
     &Title {
         &Wrapper {
@@ -203,16 +201,23 @@
     }
     &About {
         min-height: 360px;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
     }
     &Posts {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
         &Textarea {
             position: relative;
-            width: 100%;
-            padding: 13px 10px 13px 20px;
+            width: 90%;
+            padding: 20px 20px 8px 20px;
             border: none;
             background-color: rgba(4, 157, 191, 0.1);
             font-size: calc(11px + (12 - 11) * ((100vw - 320px) / (1920 - 320)));
             border-radius: 5px;
+            margin-top: 30px;
             outline: none;
             &::placeholder {
                 color: rgba(81, 89, 94, 0.6);
@@ -229,12 +234,14 @@
         }
     }
     &Event {
-        min-height: 350px;
+        background: #ffffff;
+        min-height: 450px;
+        border-radius: 8px;
         background: url('../../../Redux/asscess/img/bgBirthtday.jpg') repeat 50%/cover;
         padding: 0;
         &Body {
             background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 30px;
         }
         &White {
             text-align: left;

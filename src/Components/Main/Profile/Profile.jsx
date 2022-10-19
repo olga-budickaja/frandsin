@@ -90,40 +90,50 @@ const Profile = (props) => {
             <div className={style.body}>
                 <div className="container">
                     <div className={style.bodyWrapper}>
-                        <div className={`${style.bodyItem} ${style.bodyAbout}`}>
-                            <div className={style.bodyTitle}>
-                                <div className={style.bodyTitleWrapper}>
-                                    <div className={style.bodyTitleDescription}>
-                                        <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>About</h2>
-                                        My Self
-                                    </div>
-                                    <div className={style.bodyTitleBtns}>
-                                        <div className={`${style.bodyTitleBtn}`}><Pencil/></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className={`${style.bodyItem} ${style.bodyPosts}`}>
-                            <div className={style.bodyTitle}>
-                                <div className={style.bodyTitleWrapper}>
-                                    <div className={style.bodyTitleDescription}>
-                                        <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>Create Post</h2>
+                        <div className={style.bodyItem}>
+                            <div className={`${style.bodyAbout}`}>
+                                <div className={style.bodyTitle}>
+                                    <div className={style.bodyTitleWrapper}>
+                                        <div className={style.bodyTitleDescription}>
+                                            <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>About</h2>
+                                            My Self
+                                        </div>
+                                        <div className={style.bodyTitleBtns}>
+                                            <div className={`${style.bodyTitleBtn}`}><Pencil/></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className={`${style.bodyItem} ${style.bodyEvent}`}>
-                            <div className={`${style.bodyTitle} ${style.bodyEventBody}`}>
-                                <div className={style.bodyTitleWrapper}>
-                                    <div className={style.bodyTitleDescription}>
-                                        <h2 className={`${style.bodyTitleDescriptionTitle} ${style.bodyEventWhite} title_fz2`}>My Event</h2>
+
+                        <div className={style.bodyItem}>
+                            <div className={`${style.bodyPosts}`}>
+                                <div className={style.bodyTitle}>
+                                    <div className={style.bodyTitleWrapper}>
+                                        <div className={style.bodyTitleDescription}>
+                                            <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>Create Post</h2>
+                                        </div>
+                                        <div className={style.bodyTitleBtns}>
+                                            <div className={`${style.bodyTitleBtn}`}><Pencil/></div>
+                                        </div>
                                     </div>
-                                    <div className={style.bodyTitleBtns}>
-                                        <div className={`${style.bodyTitleBtn}`}><Reload /></div>
-                                        <div className={`${style.bodyTitleBtn}`}><Pencil /></div>
+                                </div>
+                                <textarea className={style.bodyPostsTextarea} placeholder="Write something here..."></textarea>
+                            </div>
+                        </div>
+
+                        <div className={style.bodyItem}>
+                            <div className={`${style.bodyEvent}`}>
+                                <div className={`${style.bodyTitle} ${style.bodyEventBody}`}>
+                                    <div className={style.bodyTitleWrapper}>
+                                        <div className={style.bodyTitleDescription}>
+                                            <h2 className={`${style.bodyTitleDescriptionTitle} ${style.bodyEventWhite} title_fz2`}>My Event</h2>
+                                        </div>
+                                        <div className={style.bodyTitleBtns}>
+                                            <div className={`${style.bodyTitleBtn}`}><Reload /></div>
+                                            <div className={`${style.bodyTitleBtn}`}><Pencil /></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
