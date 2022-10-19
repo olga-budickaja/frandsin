@@ -11,6 +11,7 @@ import Stars from "./Components/Main/Stars/Stars";
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 import UsersContainer from "./Components/Main/Users/UsersContainer";
+import Groups from "./Components/Main/Groups/Groups";
 
 
 function App(props) {
@@ -24,7 +25,7 @@ function App(props) {
                   <Route path="frandsin/profile" element={<Profile />} />
                   <Route path="frandsin/timeline" element={<Media />} />
                   <Route path="frandsin/favorites" element={<Stars />} />
-                  <Route path="frandsin/groups" element={<UsersContainer />} />
+                  <Route path="frandsin/groups" element={<Groups />} />
                   <Route path="frandsin/music" element={<Music />} />
                   <Route path="frandsin/weather" element={<Weather />} />
                   <Route path={"/frandsin/users/" + props.name} element={<Profile store={props.store} dispatch={props.dispatch}/>} />

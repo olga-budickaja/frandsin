@@ -131,8 +131,8 @@ let Users = (props) => {
                 </div>
                 <div>
                     {user.confirmed
-                        ? <button className={`btn btnBlue`} onClick={() => {props.confirmUser(user.id)}}>Confirm</button>
-                        : <button className={`btn btnWhite`} onClick={() => {props.unconfirmedUser(user.id)}}>Delete</button>
+                        ? <button className={`${style.itemBtn} btn btnBlue`} onClick={() => {props.confirmUser(user.id)}}>Confirm</button>
+                        : <button className={`${style.itemBtn} btn btnWhite`} onClick={() => {props.unconfirmedUser(user.id)}}>Delete</button>
                     }
                 </div>
                 </div> )

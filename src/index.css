@@ -46,6 +46,8 @@ code {
 
 .title_fz2 {
   font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
 
@@ -53,8 +55,7 @@ code {
 .btn {
   border: none;
   border-radius: 5px;
-  width: 70px;
-  height: 30px;
+  padding: 10px 20px;
   transition: all 0.5s;
   font-size: 12px;
   letter-spacing: 1px;

@@ -11,7 +11,7 @@ import { ReactComponent as Bell } from "../../Redux/asscess/icons/bell.svg";
 import {NavLink} from "react-router-dom";
 import UsersContainer from "../Main/Users/UsersContainer";
 
-function handleClick() {
+function handleClick(e: MouseEvent) {
     document.querySelector(".hidden").classList.toggle("visible");
 }
 
@@ -36,13 +36,13 @@ const Header = (props) => {
                     <Home className={style.home} />
                 </div>
 
-                    <div onClick={handleClick} className={`${style.menuLeftItem} ${style.relative}`}>
-                        <UsersPlus className={style.users} />
-                    </div>
-                    <div className={`${style.listWrapper} hidden`}>
-                        <h2 className={style.listWrapper__title}>Friend Request</h2>
-                        <UsersContainer />
-                    </div>
+                <div onClick={handleClick} className={`${style.menuLeftItem} ${style.relative}`}>
+                    <UsersPlus className={style.users} />
+                </div>
+                <div className={`${style.listWrapper} hidden`}>
+                    <h2 className={style.listWrapper__title}>Friend Request</h2>
+                    <UsersContainer />
+                </div>
             </div>
             <div className={style.menuRight}>
                 <div className={style.menuCounter}>
