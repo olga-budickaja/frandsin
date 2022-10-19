@@ -43,3 +43,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title_fz2 {
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  transition: all 0.5s;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.btnBlue {
+  background: rgba(4, 157, 191, 1);
+  color: #ffffff;
+}
+.btnBlue:hover,
+.btnBlue:focus {
+  background: rgba(4, 157, 191, .7);
+}
+.btnWhite {
+  background: #ffffff;
+  color: rgba(4, 157, 191, 1);
+  border: 2px solid rgba(4, 157, 191, 1);
+}
+.btnWhite:hover,
+.btnWhite:focus {
+  background: rgba(4, 157, 191, .2);
+}
+
