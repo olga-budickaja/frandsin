@@ -23,7 +23,7 @@ const Header = (props) => {
                     <img src={logo} alt="logo" className={style.logoImg}/>
                 </div>
                 <form className={style.search}>
-                    <input type="search" placeholder="Find Friends" className={style.searchInput}/>
+                    <input type="search" placeholder="Find Friends" className={`${style.searchInput} .searchInput`}/>
                     <div className={style.wrappBtn}>
                         <div className={style.btnSearch}>
                             <input type="submit" name="" value="" className="submit"/>

@@ -1,6 +1,5 @@
 .profile {
-    width: calc(100% - 360px);
-    margin: 0 auto;
+    width: 100%;
 }
 
 .banner {
@@ -55,6 +54,102 @@
         }
         &Btn {
             margin-top: 40px;
+        }
+    }
+}
+
+.sidePanel {
+    width: 100%;
+    margin-top: 20px;
+    &Wrapper {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 8px;
+        padding: 20px 10px;
+        width: 100%;
+        background: #ffffff;
+    }
+    &NavLeft {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        &Btn {
+            background: rgba(4, 157, 191, 0.1);
+            position: relative;
+            margin: 0 10px;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            padding-left: 40px;
+            &Icon {
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                width: 14px;
+                height: auto;
+            }
+            &svg {
+                width: 16px;
+                height: 16px;
+                fill: rgba(81, 89, 94, 0.6);
+                margin-right: 10px;
+            }
+            &Active {
+                color: #049DBF;
+                svg {
+                    fill: #049DBF
+                }
+            }
+            &:hover {
+                color: #049DBF;
+                svg {
+                    fill: #049DBF
+                }
+            }
+        }
+    }
+    &NavRight {
+        display: flex;
+        justify-content: right;
+        &Search {
+            position: relative;
+            margin-right: 20px;
+            &Input {
+                width: 250px;
+                padding: 13px 10px 13px 20px;
+                border: none;
+                background-color: rgba(4, 157, 191, 0.1);
+                font-size: calc(11px + (12 - 11) * ((100vw - 320px) / (1920 - 320)));
+                border-radius: 5px;
+                &::placeholder {
+                    color: rgba(81, 89, 94, 0.6);
+                }
+            }
+            &WrappBtn {
+                position: absolute;
+                top: 55%;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+            &BtnSearch {
+                position: relative;
+                input {
+                    width: 20px;
+                    height: 17px;
+                    border: none;
+                    color: rgba(81, 89, 94, 0.6);
+                    background: transparent;
+                }
+                svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: auto;
+                    fill: rgba(81, 89, 94, 0.6);
+                }
+            }
         }
     }
 }
