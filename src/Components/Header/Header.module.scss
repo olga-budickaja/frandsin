@@ -19,6 +19,7 @@
     margin: -10px 40px 0 0;
     width: 147px;
     height: 46px;
+    cursor: pointer;
 }
 
 .logoImg {
@@ -103,6 +104,7 @@
     fill: #fff;
     width: 18px;
     height: 18px;
+    cursor: pointer;
 }
 
 .menuRight {
@@ -161,6 +163,7 @@
     position: relative;
     width: 20px;
     height: 20px;
+    cursor: pointer;
     &:nth-child(2) {
         margin-top: -3px;
         svg {
@@ -192,6 +195,7 @@
     justify-content: left;
     width: 55%;
     height: 70px;
+    cursor: pointer;
 }
 
 .menuAvatarImage {

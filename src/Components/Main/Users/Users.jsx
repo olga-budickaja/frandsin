@@ -21,6 +21,7 @@ import user10 from "../../../Redux/asscess/img/user10.jpg";
 import bg10 from "../../../Redux/asscess/img/bg10.jpg";
 import user11 from "../../../Redux/asscess/img/user11.jpg";
 import bg11 from "../../../Redux/asscess/img/bg11.jpg";
+import style from "./Users.module.scss";
 
 let Users = (props) => {
 
@@ -118,12 +119,20 @@ let Users = (props) => {
 
     return (
         <div>
-            {props.users.map(user => <div>
-                <img src={user.src} alt="user"/>
+            {props.users.map(user => <div className={style.item}>
+                <div className={style.itemAvatar}>
+                    <div className={style.itemAvatarImage}>
+                        <img className={style.itemAvatarImg} src={user.src} alt="user"/>
+                    </div>
+                    <div>
+                        <h3 className={style.itemAvatarTitle}>{user.name}</h3>
+                        <div className={style.itemAvatarSubtitle}>{`${user.friends} Mutual Friends`}</div>
+                    </div>
+                </div>
                 <div>
                     {user.confirmed
-                        ? <button onClick={() => {props.confirmUser(user.id)}}>Confirm</button>
-                        : <button onClick={() => {props.unconfirmedUser(user.id)}}>Delete</button>
+                        ? <button className={`btn btnBlue`} onClick={() => {props.confirmUser(user.id)}}>Confirm</button>
+                        : <button className={`btn btnWhite`} onClick={() => {props.unconfirmedUser(user.id)}}>Delete</button>
                     }
                 </div>
                 </div> )

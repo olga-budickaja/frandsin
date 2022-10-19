@@ -1,0 +1,50 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: #51595e;
+
+    &Avatar {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: calc(55% - 10px);
+
+        &Image {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+
+        &Img {
+            max-width: 100%;
+            border-radius: 100%;
+        }
+
+        &Title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        &Subtitle {
+            text-align: left;
+            font-size: 12px;
+        }
+    }
+    &Buttons {
+        display: flex;
+        justify-content: space-between;
+        width: calc(45% - 10px);
+    }
+}
+
+
+
+
+
+
