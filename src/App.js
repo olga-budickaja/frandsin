@@ -10,7 +10,6 @@ import Sidebar from "./Components/Main/Sidebar/Sidebar";
 import Stars from "./Components/Main/Stars/Stars";
 import './App.css';
 import {Route, Routes} from "react-router-dom";
-import UsersContainer from "./Components/Main/Users/UsersContainer";
 import Groups from "./Components/Main/Groups/Groups";
 
 

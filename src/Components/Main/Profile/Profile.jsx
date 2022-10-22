@@ -3,7 +3,7 @@ import style from "./Profile.module.scss";
 import bg1 from "../../../Redux/asscess/img/bg2.jpg";
 import avatar from "../../../Redux/asscess/img/user1.jpg";
 import { ReactComponent as Timeline } from "../../../Redux/asscess/icons/timeline.svg";
-import { ReactComponent as About } from "../../../Redux/asscess/icons/profile.svg";
+import { ReactComponent as Video } from "../../../Redux/asscess/icons/video.svg";
 import { ReactComponent as Friends } from "../../../Redux/asscess/icons/group.svg";
 import { ReactComponent as Photo } from "../../../Redux/asscess/icons/photo.svg";
 import {ReactComponent as Search} from "../../../Redux/asscess/icons/search.svg";
@@ -36,9 +36,9 @@ const Profile = (props) => {
                                 Followers
                             </div>
                         </div>
-                        <div className={style.bannerDescriptionBtn}>
-                            <button className={`btn btnBlue`}>Edit Profile</button>
-                        </div>
+                        {/*<div className={style.bannerDescriptionBtn}>*/}
+                        {/*    <button className={`btn btnBlue`}>Edit Profile</button>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </div>
@@ -53,12 +53,7 @@ const Profile = (props) => {
                                 </span>
                                 Timeline
                             </button>
-                            <button className={`${style.sidePanelNavLeftBtn} btn`}>
-                                <span className="icon">
-                                    <About />
-                                </span>
-                                About
-                            </button>
+
                             <button className={`${style.sidePanelNavLeftBtn} btn`}>
                                 <span className="icon">
                                     <Friends />
@@ -70,6 +65,12 @@ const Profile = (props) => {
                                     <Photo />
                                 </span>
                                 Photo
+                            </button>
+                            <button className={`${style.sidePanelNavLeftBtn} btn`}>
+                                <span className="icon">
+                                    <Video />
+                                </span>
+                                Video
                             </button>
                         </div>
                         <div className={style.sidePanelNavRight}>
@@ -96,11 +97,11 @@ const Profile = (props) => {
                                     <div className={style.bodyTitleWrapper}>
                                         <div className={style.bodyTitleDescription}>
                                             <h2 className={`${style.bodyTitleDescriptionTitle} title_fz2`}>About</h2>
-                                            My Self
+                                            {/*My Self*/}
                                         </div>
-                                        <div className={style.bodyTitleBtns}>
-                                            <div className={`${style.bodyTitleBtn}`}><Pencil/></div>
-                                        </div>
+                                        {/*<div className={style.bodyTitleBtns}>*/}
+                                        {/*    <div className={`${style.bodyTitleBtn}`}><Pencil/></div>*/}
+                                        {/*</div>*/}
                                     </div>
                                 </div>
                             </div>
