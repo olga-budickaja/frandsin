@@ -11,7 +11,6 @@ import {ReactComponent as Pencil} from "../../../Redux/asscess/icons/pencil.svg"
 import {ReactComponent as Reload} from "../../../Redux/asscess/icons/reload.svg";
 
 const Profile = (props) => {
-
     return (
         <section className={style.profile}>
             <div className="container">
@@ -148,7 +147,4 @@ const Profile = (props) => {
     )
 }
 
-
-
-console.log(Profile);
 export default Profile;

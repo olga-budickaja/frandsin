@@ -1,6 +1,7 @@
 const CONFIRM = 'CONFIRM';
 const UNCONFIRMED = 'UNCONFIRMED';
 const SET_USERS = 'SET_USERS';
+const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 
 let initialState = {
     users: [],
@@ -51,6 +52,13 @@ export const setUsersCreator = (users) => {
     return {
         type: SET_USERS,
         users
+    }
+}
+
+export const toggleIsFetching = (isFetching) => {
+    return {
+        type: TOGGLE_IS_FETCHING,
+        isFetching
     }
 }
 
