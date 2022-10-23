@@ -17,7 +17,7 @@ const Navbar = () => {
                 <NavLink to={'frandsin/favorites'} className={style.navBarNavItem}>
                     <Stars />
                 </NavLink>
-                <NavLink to={'frandsin/groups'} className={style.navBarNavItem}>
+                <NavLink to={'frandsin/profile'} className={style.navBarNavItem}>
                     <Groups />
                 </NavLink>
                 <NavLink to={'frandsin/music'} className={style.navBarNavItem}>

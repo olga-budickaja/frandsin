@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import style from "./Users.module.scss";
 import {db} from "../../../firebase-config/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import {NavLink} from "react-router-dom";
 
 
 const Users = (props) => {
@@ -22,7 +23,10 @@ const Users = (props) => {
             {props.users.map(user => <div key={user.id} className={style.item}>
                 <div className={style.itemAvatar}>
                     <div className={style.itemAvatarImage}>
-                        <img className={style.itemAvatarImg} src={user.src} alt="user"/>
+                        <NavLink to={'frendsin/profile' + user.id}>
+                            <img className={style.itemAvatarImg} src={user.src} alt="user"/>
+                        </NavLink>
+
                     </div>
                     <div>
                         <h3 className={style.itemAvatarTitle}>{user.name}</h3>

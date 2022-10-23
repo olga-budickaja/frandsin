@@ -10,7 +10,7 @@ class ProfileContainer extends React.Component {
         let userId = this.props.router.params.userId;
 
         axios
-            .get(`http://localhost:3000/frandsin/profiles/${userId}`)
+            .get(`http://localhost:3000/frandsin/profile/${userId}`)
             .then(response => {
                 this.props.setUserProfile(response.data);
             });

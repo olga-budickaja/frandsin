@@ -21,7 +21,7 @@ const SideBarItem = (props) => {
     return ( <>{users.slice(1, 6).map(user =>
 
         <li key={user.id} className={style.item}>
-            <NavLink to={`frandsin/profiles/${user.name.replace(" ", "-").replace(" ", "-").replace(" ", "-")}`} className={style.itemLink}>
+            <NavLink to={`frandsin/profile/${user.id}`} className={style.itemLink}>
                 <img className={style.itemImg} src={user.src} alt={user.name}/>
             </NavLink>
         </li>
