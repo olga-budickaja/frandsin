@@ -8,7 +8,7 @@ const Sidebar = (props) => {
     return (
         <div className={style.sideBar}>
             <nav className={style.sideBarNav}>
-                <SideBarList users={props.users} />{
+                <SideBarList key={props.id} users={props.users} />{
             }
             </nav>
         </div>

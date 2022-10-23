@@ -11,7 +11,7 @@ const SideBarItem = (props) => {
     const getUsers = async () => {
         const data = await getDocs(usersCollectionRef);
         setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-        console.log(data);
+        // console.log(data);
     }
 
     useEffect(() => {
@@ -20,8 +20,8 @@ const SideBarItem = (props) => {
 
     return ( <>{users.slice(1, 6).map(user =>
 
-        <li className={style.item}>
-            <NavLink to={`frandsin/profiles/${user.name.replace(" ", "-")}`} className={style.itemLink}>
+        <li key={user.id} className={style.item}>
+            <NavLink to={`frandsin/profiles/${user.name.replace(" ", "-").replace(" ", "-").replace(" ", "-")}`} className={style.itemLink}>
                 <img className={style.itemImg} src={user.src} alt={user.name}/>
             </NavLink>
         </li>

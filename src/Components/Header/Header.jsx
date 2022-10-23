@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import logo from "./Logo.png";
 import avatar from "../../Redux/asscess/img/user1.jpg";
 import style from './Header.module.scss';
@@ -10,12 +10,27 @@ import { ReactComponent as Theme } from "../../Redux/asscess/icons/theme.svg";
 import { ReactComponent as Bell } from "../../Redux/asscess/icons/bell.svg";
 import {NavLink} from "react-router-dom";
 import UsersContainer from "../Main/Users/UsersContainer";
+import {collection, getDocs} from "firebase/firestore";
+import {db} from "../../firebase-config/firebase-config";
 
-function handleClick(e: MouseEvent) {
+function handleClick() {
     document.querySelector(".hidden").classList.toggle("visible");
 }
 
 const Header = (props) => {
+    const [users, setUsers] = useState([]);
+    const usersCollectionRef = collection(db, "users");
+
+    const getUsers = async () => {
+        const data = await getDocs(usersCollectionRef);
+        setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        // console.log(data);
+    }
+
+    useEffect(() => {
+        getUsers();
+    }, []);
+
     return (
         <header className={style.header}>
             <div className={style.menuLeft}>
@@ -76,16 +91,17 @@ const Header = (props) => {
                                 <span className={style.menuRightItemCountValue}>5</span>
                             </div>
                         </div>
-                    </div>
+                    </div>{users.slice(6, 7).map(user =>
                     <div className={style.menuAvatar}>
-                        <NavLink to={'frandsin/profile'} className={style.menuAvatarImage}>
-                            <img src={avatar} className={style.menuAvatarImg} alt="avatar"/>
+                        <NavLink to={`frandsin/profile`} className={style.menuAvatarImage}>
+                            <img src={user.src} className={style.menuAvatarImg} alt={user.name}/>
                         </NavLink>
                         <div className={style.menuAvatarName}>
-                            Katrin Love
+                            {user.name}
                             <span className={style.menuAvatarNameStatus}>Active now</span>
                         </div>
-                    </div>
+
+                    </div>)}
                 </div>
             </div>
         </header>

@@ -1,9 +1,12 @@
 import React from "react";
 import style from "./Groups.module.css"
+import ProfileContainer from "../Profile/ProfileContainer";
 
 const Groups = () => {
     return (
-        <section className={style.groups}>Groups</section>
+        <section>
+            <ProfileContainer />
+        </section>
     )
 }
 

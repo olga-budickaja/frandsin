@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import style from "./Profile.module.scss";
 import bg1 from "../../../Redux/asscess/img/bg2.jpg";
 import avatar from "../../../Redux/asscess/img/user1.jpg";
@@ -9,29 +9,46 @@ import { ReactComponent as Photo } from "../../../Redux/asscess/icons/photo.svg"
 import {ReactComponent as Search} from "../../../Redux/asscess/icons/search.svg";
 import {ReactComponent as Pencil} from "../../../Redux/asscess/icons/pencil.svg";
 import {ReactComponent as Reload} from "../../../Redux/asscess/icons/reload.svg";
+import {collection, getDocs} from "firebase/firestore";
+import {db} from "../../../firebase-config/firebase-config";
+
+
 
 const Profile = (props) => {
-    return (
+    const [users, setUsers] = useState([]);
+    const usersCollectionRef = collection(db, "users");
+
+    const getUsers = async () => {
+        const data = await getDocs(usersCollectionRef);
+        setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+        // console.log(data);
+    }
+
+    useEffect(() => {
+        getUsers();
+    }, []);
+
+    return ( <>{users.map(user =>
         <section className={style.profile}>
             <div className="container">
                 <div className={style.banner}>
-                    <img className={style.bannerImg} src={bg1} alt="banner"/>
+                    <img className={style.bannerImg} src={user.srcBg} alt="banner"/>
                     <div className={style.bannerDescription}>
                         <div className={style.bannerDescriptionImage}>
-                            <img src={avatar} alt="avatar"/>
+                            <img src={user.src} alt="avatar"/>
                         </div>
-                        <h1 className={`title_fz2`}>Katrin Love</h1>
+                        <h1 className={`title_fz2`}>{user.name}</h1>
                         <div className={style.bannerDescriptionCounters}>
                             <div className={style.bannerDescriptionCountersItem}>
-                                <div className={`title_fz2`}>323</div>
+                                <div className={`title_fz2`}>{user.following}</div>
                                 Following
                             </div>
                             <div className={style.bannerDescriptionCountersItem}>
-                                <div className={`title_fz2`}>52367</div>
+                                <div className={`title_fz2`}>{user.likes}</div>
                                 Likes
                             </div>
                             <div className={style.bannerDescriptionCountersItem}>
-                                <div className={`title_fz2`}>7589</div>
+                                <div className={`title_fz2`}>{user.followers}</div>
                                 Followers
                             </div>
                         </div>
@@ -144,6 +161,9 @@ const Profile = (props) => {
 
         </section>
 
+    )
+    }
+    </>
     )
 }
 

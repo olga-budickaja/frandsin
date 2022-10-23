@@ -27,6 +27,7 @@ function App(props) {
                   <Route path="frandsin/groups" element={<Groups />} />
                   <Route path="frandsin/music" element={<Music />} />
                   <Route path="frandsin/weather" element={<Weather />} />
+                  <Route path="frandsin/profiles/*" element={<Sidebar />} />
                   <Route path={"/frandsin/users/" + props.name} element={<Profile store={props.store} dispatch={props.dispatch}/>} />
               </Routes>
               <Sidebar />
